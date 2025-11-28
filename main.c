@@ -19,6 +19,8 @@ int main() {
     assert(linked_list_search(head, 5)->data == 5);
     assert(linked_list_search(head, 60) == NULL);
 
+    linked_list_destroy(&head);
+
     return 0;
 
 }
