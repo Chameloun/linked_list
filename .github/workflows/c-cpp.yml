@@ -1,0 +1,19 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "feature/capacity" ]
+  pull_request:
+    branches: [ "feature/capacity" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: make test
+      run: |
+        cd tests
+        make test
