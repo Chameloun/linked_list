@@ -26,4 +26,6 @@ bool linked_list_destroy(node **me);
 
 bool linked_list_is_empty(node *me);
 
+size_t linked_list_capacity(node *me);
+
 #endif

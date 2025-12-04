@@ -99,3 +99,21 @@ bool linked_list_is_empty(node *me) {
     return me == NULL;
 
 }
+
+size_t linked_list_capacity(node *me) {
+
+    node *current = me;
+
+    size_t capacity = 0;
+
+    while(current != NULL) {
+
+        capacity++;
+
+        current = current->next;
+
+    }
+
+    return capacity;
+
+}
