@@ -111,6 +111,8 @@ size_t linked_list_size(node *me) {
 
     while(current != NULL) {
 
+        size++;
+
         current = current->next;
 
     }
