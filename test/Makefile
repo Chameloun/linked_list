@@ -25,5 +25,8 @@ coverage_report:
 
 	genhtml coverage_filtered.info --output-directory coverage_report
 
+docs:
+	doxygen
+
 clean:
 	rm -rf *.o lint_report *.gcno *.gcda *.info coverage_report

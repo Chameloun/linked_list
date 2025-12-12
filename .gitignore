@@ -5,3 +5,5 @@
 *.gcno
 coverage_report
 lint_report
+html
+latex
