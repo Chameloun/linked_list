@@ -24,6 +24,8 @@ node *linked_list_search(node *me, DATA_TYPE data);
 
 bool linked_list_destroy(node **me);
 
-bool linked_list_is_empty(node *me);
+bool linked_list_is_empty(const node *me);
+
+size_t linked_list_size(node *me);
 
 #endif

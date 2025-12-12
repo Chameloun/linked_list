@@ -83,10 +83,51 @@ void test_function_remove(void) {
 
 }
 
+void test_function_size() {
+
+    TEST_ASSERT_EQUAL_size_t(0, linked_list_size(test_head));
+
+    bool success = linked_list_add(&test_head, 1);
+
+    TEST_ASSERT_TRUE(success);
+
+    TEST_ASSERT_EQUAL_size_t(1, linked_list_size(test_head));
+
+}
+
+void test_function_print() {
+
+    TEST_IGNORE();
+
+    linked_list_print(&test_head);
+
+}
+
+void test_function_empty() {
+
+    TEST_ASSERT_TRUE(linked_list_is_empty(test_head));
+
+    bool success = linked_list_add(&test_head, 1);
+
+    TEST_ASSERT_TRUE(success);
+
+    TEST_ASSERT_FALSE(linked_list_is_empty(test_head));
+
+    linked_list_remove(&test_head);
+
+    TEST_ASSERT_TRUE(success);
+
+    TEST_ASSERT_TRUE(linked_list_is_empty(test_head));
+
+}
+
 int main(void) {
     UNITY_BEGIN();
     RUN_TEST(test_function_destroy);
     RUN_TEST(test_function_add);
     RUN_TEST(test_function_remove);
+    RUN_TEST(test_function_size);
+    RUN_TEST(test_function_print);
+    RUN_TEST(test_function_empty);
     return UNITY_END();
 }

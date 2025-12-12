@@ -94,7 +94,7 @@ bool linked_list_destroy(node **me) {
 
 }
 
-bool linked_list_is_empty(node *me) {
+bool linked_list_is_empty(const node *me) {
 
     return me == NULL;
 

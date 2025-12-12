@@ -1,2 +1,7 @@
 *.o
 *.exe
+*.info
+*.gcda
+*.gcno
+coverage_report
+lint_report
